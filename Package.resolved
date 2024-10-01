@@ -1,0 +1,68 @@
+{
+  "pins" : [
+    {
+      "identity" : "google-mlkit-swiftpm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/d-date/google-mlkit-swiftpm",
+      "state" : {
+        "revision" : "68b34cc1a4f090aeab61f1ef625a2edb1e753a16",
+        "version" : "3.2.1"
+      }
+    },
+    {
+      "identity" : "googledatatransport",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GoogleDataTransport.git",
+      "state" : {
+        "revision" : "a637d318ae7ae246b02d7305121275bc75ed5565",
+        "version" : "9.4.0"
+      }
+    },
+    {
+      "identity" : "googleutilities",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GoogleUtilities.git",
+      "state" : {
+        "revision" : "57a1d307f42df690fdef2637f3e5b776da02aad6",
+        "version" : "7.13.3"
+      }
+    },
+    {
+      "identity" : "gtm-session-fetcher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/gtm-session-fetcher.git",
+      "state" : {
+        "revision" : "4e9bbf2808b8fee444e84a48f5f3c12641987d3e",
+        "version" : "1.7.2"
+      }
+    },
+    {
+      "identity" : "nanopb",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/firebase/nanopb.git",
+      "state" : {
+        "revision" : "819d0a2173aff699fb8c364b6fb906f7cdb1a692",
+        "version" : "2.30909.0"
+      }
+    },
+    {
+      "identity" : "promises",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/promises.git",
+      "state" : {
+        "revision" : "540318ecedd63d883069ae7f1ed811a2df00b6ac",
+        "version" : "2.4.0"
+      }
+    },
+    {
+      "identity" : "sybrincommon",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SybrinDevOps/SybrinCommon",
+      "state" : {
+        "branch" : "5.2.25",
+        "revision" : "f3e162e59f9d2ccf725c9247e34b431395bc3371"
+      }
+    }
+  ],
+  "version" : 2
+}
