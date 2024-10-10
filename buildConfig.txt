@@ -1,0 +1,41 @@
+#############################################
+#####Meta information about the pod spec#####
+#############################################
+
+project_name=Sybrin.iOS.Identity
+authors_name=Innovations
+authors_email=innovations@sybrin.com
+license_type=Copyright
+license_text=Copyright @ 2020 Sybrin Systems
+homepage=https://ai.sybrin.com/
+source_files=
+summary=Sybrin Identity SDK, capture Green Book ID, ID Card or Passports
+documentation_url=
+ios_version=14.0
+swift_version=
+vendored_frameworks=Sybrin_iOS_Identity.framework
+module_name=sybrin_ios_identity
+
+###########################################
+##########Build path information###########
+###########################################
+
+######RELEASE#######
+release_artifact_path=https://github.com/sybrin-innovations/Sybrin.iOS.SDK.Identity.git
+release_artifact_name=Sybrin.iOS.SDK.Identity
+
+release_pod_spec_name=Sybrin.iOS.Pods
+
+#######SNAPSHOT##########
+snapshot_artifact_path=https://github.com/sybrin-innovations/Sybrin.iOS.SDK.Identity.Test.git
+snapshot_artifact_name=Sybrin.iOS.SDK.Identity.Test
+
+snapshot_pod_spec_name=Sybrin.iOS.Pods.Test
+
+#####DEBUG INFORMATION#####
+debug_symbol_name=Sybrin.iOS.DebugSymbols
+
+#####VALIDATION###########
+pod_spec_validation_paths=https://github.com/sybrin-innovations/Sybrin.iOS.Pods.git,https://cdn.cocoapods.org/,https://github.com/sybrin-innovations/Sybrin.iOS.Pods.Test.git
+
+snapshot_pod_spec_validation_paths=https://github.com/sybrin-innovations/Sybrin.iOS.Pods.Test.git,https://cdn.cocoapods.org/,https://github.com/sybrin-innovations/Sybrin.iOS.Pods.git

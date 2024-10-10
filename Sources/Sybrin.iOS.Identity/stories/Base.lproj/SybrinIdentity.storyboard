@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Identity Scan View Controller-->
+        <scene sceneID="oHy-Gy-e4Q">
+            <objects>
+                <viewController storyboardIdentifier="IdentityScanVC" modalPresentationStyle="fullScreen" id="JsH-uH-vgr" customClass="IdentityScanViewController" customModule="Sybrin_iOS_Identity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvu-Ie-kXK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SM-14-iHg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eXF-rB-yyt">
+                                <rect key="frame" x="162" y="496" width="90" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="GRH-bn-Msx"/>
+                                    <constraint firstAttribute="height" constant="120" id="a7a-gO-Adh"/>
+                                </constraints>
+                            </imageView>
+                            <view hidden="YES" alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAJ-Pf-7Me">
+                                <rect key="frame" x="174.66666666666666" y="631" width="65" height="65"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="8wX-9A-fBf"/>
+                                    <constraint firstAttribute="height" constant="65" id="g4D-d6-egI"/>
+                                </constraints>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQY-oj-Gsy">
+                                <rect key="frame" x="174.66666666666666" y="631" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Gw8-Jc-Pp1"/>
+                                    <constraint firstAttribute="width" constant="65" id="fAu-4x-huG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system"/>
+                                <connections>
+                                    <action selector="capture:" destination="JsH-uH-vgr" eventType="touchUpInside" id="gqJ-7Z-1Mf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INNOVATIONS LAB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpX-KM-wJr">
+                                <rect key="frame" x="30" y="696" width="354" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="nd6-1S-0Y7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A DIVISION OF SYBRIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsy-NO-DUp">
+                                <rect key="frame" x="30" y="716" width="354" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Gs4-IB-Cs7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AAJ-V8-cd5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AAJ-V8-cd5" firstAttribute="bottom" secondItem="Bsy-NO-DUp" secondAttribute="bottom" constant="10" id="34g-3H-WFs"/>
+                            <constraint firstItem="aAJ-Pf-7Me" firstAttribute="centerX" secondItem="AAJ-V8-cd5" secondAttribute="centerX" id="B0C-fk-1Ty"/>
+                            <constraint firstItem="gpX-KM-wJr" firstAttribute="leading" secondItem="AAJ-V8-cd5" secondAttribute="leading" constant="30" id="C1X-Nj-cXP"/>
+                            <constraint firstItem="Bsy-NO-DUp" firstAttribute="leading" secondItem="AAJ-V8-cd5" secondAttribute="leading" constant="30" id="CXm-2t-pZy"/>
+                            <constraint firstItem="gpX-KM-wJr" firstAttribute="top" secondItem="sQY-oj-Gsy" secondAttribute="bottom" id="Cpk-KB-AoG"/>
+                            <constraint firstItem="Bsy-NO-DUp" firstAttribute="top" secondItem="gpX-KM-wJr" secondAttribute="bottom" id="GEK-4v-L7y"/>
+                            <constraint firstItem="AAJ-V8-cd5" firstAttribute="trailing" secondItem="gpX-KM-wJr" secondAttribute="trailing" constant="30" id="VnB-nL-50k"/>
+                            <constraint firstItem="gpX-KM-wJr" firstAttribute="top" secondItem="aAJ-Pf-7Me" secondAttribute="bottom" id="h0d-Wo-QAH"/>
+                            <constraint firstItem="eXF-rB-yyt" firstAttribute="centerX" secondItem="AAJ-V8-cd5" secondAttribute="centerX" id="hMe-L5-m7D"/>
+                            <constraint firstItem="sQY-oj-Gsy" firstAttribute="top" secondItem="eXF-rB-yyt" secondAttribute="bottom" constant="15" id="hZ1-Ue-J9d"/>
+                            <constraint firstItem="sQY-oj-Gsy" firstAttribute="centerX" secondItem="AAJ-V8-cd5" secondAttribute="centerX" id="iyE-iX-SXm"/>
+                            <constraint firstItem="0SM-14-iHg" firstAttribute="trailing" secondItem="fvu-Ie-kXK" secondAttribute="trailing" id="jW6-Se-jeT"/>
+                            <constraint firstItem="AAJ-V8-cd5" firstAttribute="trailing" secondItem="Bsy-NO-DUp" secondAttribute="trailing" constant="30" id="oZd-QW-O2A"/>
+                            <constraint firstItem="0SM-14-iHg" firstAttribute="top" secondItem="fvu-Ie-kXK" secondAttribute="top" id="qpL-h6-PRu"/>
+                            <constraint firstItem="0SM-14-iHg" firstAttribute="leading" secondItem="fvu-Ie-kXK" secondAttribute="leading" id="sOX-m8-sfT"/>
+                            <constraint firstItem="0SM-14-iHg" firstAttribute="bottom" secondItem="fvu-Ie-kXK" secondAttribute="bottom" id="u0R-TI-ULy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CameraPreview" destination="0SM-14-iHg" id="QmM-gj-QIm"/>
+                        <outlet property="HeadingBrandingLabel" destination="gpX-KM-wJr" id="5eV-cS-Ho1"/>
+                        <outlet property="ManualCaptureButton" destination="sQY-oj-Gsy" id="3iI-ch-SXp"/>
+                        <outlet property="SubtitleBrandingLabel" destination="Bsy-NO-DUp" id="P6U-jl-HC1"/>
+                        <outlet property="buttonBg" destination="aAJ-Pf-7Me" id="lq7-RF-vcI"/>
+                        <outlet property="imageView" destination="eXF-rB-yyt" id="dWi-X4-7vs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikZ-hg-R3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713.04347826086962" y="253.53260869565219"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

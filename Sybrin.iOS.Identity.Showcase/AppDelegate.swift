@@ -1,0 +1,57 @@
+//
+//  AppDelegate.swift
+//  Sybrin.iOS.Identity.Showcase
+//
+//  Created by Nico Celliers on 2020/08/31.
+//  Copyright © 2020 Sybrin Systems. All rights reserved.
+//
+
+import UIKit
+//import Sybrin_iOS_Identity
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
+    // Sybrin License
+    private let licenseKey: String = "gv18Obz8Ud4K4F/0vxzSisBVIJRAQ3BZvXH+Ua/bxZyfSJipqnioGrv6mGOQKlJh629xdvD0duGlCvYUX6xhFHZEMgMRWroXSS9BwwRdps12Hmj4oKVKD0rl9kXY0pLcrz+GiYtRjjTdgd6coE+oUXQkdkMHiBU5SftPK6Yx5NwlKNUw2z7kbCZBrDhem/uOpBgXA6F7js4v4CjIBquJng53Dn1um3JPkpNuMnEVWsIAtDC0g9es4ENut2QHan8FHKyHXGMW3HUH1GjCPHp0pwjrDUGh3quzb89c6KOCfSn75Pfkjiuztnvcia+8vh7aDdOMzxJwo+/rgXcmZiskq4UhCU1iDEIJUdMD+EUVqrM3hIEDQ+Pmf0ol/7iIp0Ew45OvkpSrKD3NV8UQYaRIHOdIfvEULouuWgJTm4CwELTgL92q/8dgHKv7zJKn3GHHdGCclubbeCk2VUFzet0aMNDpgkP9oHccjpy625mWf/3BMJw5ttyso1uJ6OljOXQ+"
+    // Client License
+//    private let licenseKey: String = "gv18Obz8Ud4K4F/0vxzSisBVIJRAQ3BZvXH+Ua/bxZyfSJipqnioGrv6mGOQKlJhJD91LcSSHsQkzyCKCfHbgpdGCpfvf77clpzpd8LKjGJK+VU9FemkQxjgw0+n/HBCP9ng1r/slb4X35hhdCnHAU3Z3zxKMehBQY7aoetE3vhsVZvGY8PmN5qNZgvjs5oV7KbA5r37wZcwT5oDlKRyJZ7wZkRoJ5Bm8D906T64f7q2riU8xRGy5pCtlvyIo1pM5Jyrcwu8kNJKQEegMRt8LHqC1va3oQi40rP1UIgaNhYNyxL7zds3kOBSXrjg5a5BhuJ1V9ZHce8fYoTIV5QydE4hysW00kW2Tb4/mdDIPaH7n7bs5L3HWRNt5OGlQXYlu0Y/trwtl21ZNuhKoA9a6XmcpGgfOS01FyOpq0OApToYtMBabzWff08ahW5LVlWeqzRRPmUDYlXXxWtC5VxFhIiSNC6UqrUcTztA5t8Jp0OCIDAFVtMQEESfB8IPglUv"
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+       // let sybConfig = SybrinIdentity/*Configuration(license: licenseKey, environmentKey: "jeJMnE9i4lXNAy0F56ll0L3/7CBQEnLkH76fs2dqN20/3jN+vO4cJ0Z7sbk6+XL56ustFl0/Qxvvkp4o1jOonAfbMryFA2nbSrfwh7wl6cjcLvyfD/0YoAEr4O+Gf/8Z2+IkQe4N/nH6pjRGh6wTmrcTnCfIaoui95FMqm9IVC32cltlUUZe5peyOlbrRvNIaQ7elNyid+R9FM9WgZbpD7HagP9qiWaZgyEDbO5ILD18X1vyna+Xpe+sZfdndF/0FT7Rknr19XZ2B9dPAh0UXV11SJbWqJrj6vF9HiRgdolHC0mpXXnJpvW6bnsI8+JIf3ll0M8OdftdDCBCHoEbk3jxRNb9N87yKeTduvcFhm/k9kLGzCHjUDwGhhx66LR3/Pv7aJwCdQnedoJg4N4pPpXSneSFF+t1lWbG0rQDFVK//rPUkYdGHAOGkmRAugP8UcxLGz07CfAhrdmjp32zVGqgJgmwWMu3TVYeU/D5lIbAydU4F7oCGykyIhYp6nzIF/t/P9pMK5Wu15GNuULFn+ZSZJx80jHoWGkKL1bTtmXtj2zypN4HoAuc+LbUMu3cMP6E946KYg7VkfanaC2QMZuKGL+Eh4JQg2GXri53t3KOuExuckaaC48R+jK9mGD+0Y/r2lq+rLxsbJJUml3MZWaGXIPHA3LWBTxGJG2fKZHARL7W8Fq9eAGB9NWuAPwxXkz5Xhqi1WV433gF23SorpLQu5gOOZGUbVS0FAeR0KFv7UoE/jZ1sp+1/8cuNX/WayP6vOA3ZYolZcmrLe/zXZb+fZUUJ6nEObcurYTvBYrf0yd7Q67XctAYdd7FusUhf9Ab5KlT8v3AXYP6lzwgMccO89zyTnm+07CRkzpOxZ7W6vFWb59LrxrPxgY2CvMyhuPOml4q/XyxHNSJ/8FkzuwAdaGFltOYhDodcFz9Xp/PPNwYhzG8WHW0K4KaP9t8L0XpCnPqpnoK/OhBTDgupxTxe18/JwUH+BvslBT/KgohgCdUa7vUiUY85uItC8f6vq3shSIECyrj6Ccr3zqKA3YPuYtDqZBlrd2e0ceNxw7vEr9VfmaR4RgNHupsTpxLPU4z8HmIYHA7Tj7OutWB5xr4ZgdYEMzPYVV8NoRsZOpsolvum4pWVpuSWEr0scgAy3cj2fP/UJtA/2eVNMLaDsi4p+qf1GcmTkH4PwZZKAl04ZHbauVVv5zr9bIGmV7hBH04rFLuMhD5u/WOQpQuUpie7gy36WAvN/FizEsMCFlvYXY/kRYKkXagQ5lUp7WEqpDskv6aZ/M7vC2Ps5vJaPV6K4nR2Wrha/cnyQ+FQc+b1OVMIV0zLvge/YREomac/IMbyHFq79TSlB7YC4smugZM4c9VWrjAS+Q5Hluud0navShjxgAK4tWE90eAXx3uFEEdgA6+MMfsr5O8EIZVA0/6Sudmy4phWEWXppPSxhEoH85mrTlLL2WUPOdNc2C5mLlWsm9e+S8eoqefanPM7gspWxBZ9NTLKuSD7BxtJJ/d1UUYvER1NCsc4Pfu7faop6CV7/+/vBNmX5OCz0/KafKwXRaNKN+k/mIhBjK1T3XdpQyjC4uLcF5ExwTsDyX1V38qdVbiY0xsjMJtP6k5BK3msK3e4Hd9w2rFObEw/nDJb6Up6iv492nhSjfPapuM7vXPW1kGqxAzPRpphHCZJQ==")*/
+        
+        
+//        sybConfig.environmentKey = "jeJMnE9i4lXNAy0F56ll0L3/7CBQEnLkH76fs2dqN20/3jN+vO4cJ0Z7sbk6+XL56ustFl0/Qxvvkp4o1jOonAfbMryFA2nbSrfwh7wl6cjcLvyfD/0YoAEr4O+Gf/8Z2+IkQe4N/nH6pjRGh6wTmrcTnCfIaoui95FMqm9IVC32cltlUUZe5peyOlbrRvNIaQ7elNyid+R9FM9WgZbpD7HagP9qiWaZgyEDbO5ILD18X1vyna+Xpe+sZfdndF/0FT7Rknr19XZ2B9dPAh0UXV11SJbWqJrj6vF9HiRgdolHC0mpXXnJpvW6bnsI8+JIf3ll0M8OdftdDCBCHoEbk3jxRNb9N87yKeTduvcFhm/k9kLGzCHjUDwGhhx66LR3/Pv7aJwCdQnedoJg4N4pPpXSneSFF+t1lWbG0rQDFVK//rPUkYdGHAOGkmRAugP8UcxLGz07CfAhrdmjp32zVGqgJgmwWMu3TVYeU/D5lIbAydU4F7oCGykyIhYp6nzIF/t/P9pMK5Wu15GNuULFn+ZSZJx80jHoWGkKL1bTtmXtj2zypN4HoAuc+LbUMu3cMP6E946KYg7VkfanaC2QMZuKGL+Eh4JQg2GXri53t3KOuExuckaaC48R+jK9mGD+0Y/r2lq+rLxsbJJUml3MZWaGXIPHA3LWBTxGJG2fKZHARL7W8Fq9eAGB9NWuAPwxXkz5Xhqi1WV433gF23SorpLQu5gOOZGUbVS0FAeR0KFv7UoE/jZ1sp+1/8cuNX/WayP6vOA3ZYolZcmrLe/zXZb+fZUUJ6nEObcurYTvBYrf0yd7Q67XctAYdd7FusUhf9Ab5KlT8v3AXYP6lzwgMccO89zyTnm+07CRkzpOxZ7W6vFWb59LrxrPxgY2CvMyhuPOml4q/XyxHNSJ/8FkzuwAdaGFltOYhDodcFz9Xp/PPNwYhzG8WHW0K4KaP9t8L0XpCnPqpnoK/OhBTDgupxTxe18/JwUH+BvslBT/KgohgCdUa7vUiUY85uItC8f6vq3shSIECyrj6Ccr3zqKA3YPuYtDqZBlrd2e0ceNxw7vEr9VfmaR4RgNHupsTpxLPU4z8HmIYHA7Tj7OutWB5xr4ZgdYEMzPYVV8NoRsZOpsolvum4pWVpuSWEr0scgAy3cj2fP/UJtA/2eVNMLaDsi4p+qf1GcmTkH4PwZZKAl04ZHbauVVv5zr9bIGmV7hBH04rFLuMhD5u/WOQpQuUpie7gy36WAvN/FizEsMCFlvYXY/kRYKkXagQ5lUp7WEqpDskv6aZ/M7vC2Ps5vJaPV6K4nR2Wrha/cnyQ+FQc+b1OVMIV0zLvge/YREomac/IMbyHFq79TSlB7YC4smugZM4c9VWrjAS+Q5Hluud0navShjxgAK4tWE90eAXx3uFEEdgA6+MMfsr5O8EIZVA0/6Sudmy4phWEWXppPSxhEoH85mrTlLL2WUPOdNc2C5mLlWsm9e+S8eoqefanPM7gspWxBZ9NTLKuSD7BxtJJ/d1UUYvER1NCsc4Pfu7faop6CV7/+/vBNmX5OCz0/KafKwXRaNKN+k/mIhBjK1T3XdpQyjC4uLcF5ExwTsDyX1V38qdVbiY0xsjMJtP6k5BK3msK3e4Hd9w2rFObEw/nDJb6Up6iv492nhSjfPapuM7vXPW1kGqxAzPRpphHCZJQ=="
+        
+        //"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"
+        
+//        sybConfig.language = .ENGLISH
+//        SybrinIdentity.shared.configuration = sybConfig
+        
+        return true
+    }
+
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    }
+
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+}
